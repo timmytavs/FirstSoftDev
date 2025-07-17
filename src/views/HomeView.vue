@@ -17,12 +17,11 @@ function onClick() {
       <v-app-bar class="px-3">
         <v-spacer></v-spacer>
         <div class="top-left">
-          <v-img :src="WebLogo" width="150" height="auto" class="logo"></v-img>
+          <v-img :src="WebLogo" width="200" height="auto" class="logo"></v-img>
         </div>
 
         <v-btn
           :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-          text="Toggle Theme"
           slim
           @click="onClick"
         ></v-btn>
@@ -38,9 +37,10 @@ function onClick() {
         <v-container>
           <v-row>
             <v-col cols="12" class="d-flex flex-column align-center justidfy-center">
-              <!-- <v-img :src="LogoCSUCC" contain width="200" height="200"> </v-img> -->
               <v-img :src="LogoCSUCC" contain width="200" height="200"> </v-img>
-              <h1 class="text-h1 text-center mt-16 font_weight-bold">Welcome to CSU-CC</h1>
+              <h1 class="text-h2 text-center mt-16 font_weight-bold">
+                Welcome to CSU-CC Home Page
+              </h1>
               <v-btn
                 class="mt-5"
                 prepend-icon="mdi-login"
@@ -64,7 +64,7 @@ function onClick() {
   position: absolute;
   top: 0px;
   left: 2px;
-  display: fkex;
+  display: flex;
   align-items: center;
   padding: 0.5rem;
   gap: 0.5rem;

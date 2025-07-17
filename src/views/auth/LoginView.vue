@@ -17,12 +17,11 @@ const visible = ref(false)
       <v-app-bar class="px-3">
         <v-spacer></v-spacer>
         <div class="top-left">
-          <v-img :src="WebLogo" width="150" height="auto" class="logo"></v-img>
+          <v-img :src="WebLogo" width="200" height="auto" class="logo"></v-img>
         </div>
 
         <v-btn
           :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-          text="Toggle Theme"
           slim
           @click="onClick"
         ></v-btn>
@@ -41,22 +40,12 @@ const visible = ref(false)
             <v-col cols="12" class="d-flex flex-column align-center justidfy-center">
               <div>
                 <div class="d-flex align-center justify center">
-                  <!-- <v-img :src="LogoCSUCC" contain width="200" height="200"> </v-img> -->
                   <v-img :src="LogoCSUCC" contain width="200" height="200"> </v-img>
                 </div>
-                <v-btn
-                  class="mt-5"
-                  size="x-large"
-                  color="blue"
-                  elevation="10"
-                  :to="{ name: 'home' }"
-                >
-                  Back to Home
-                </v-btn>
               </div>
 
               <div>
-                <v-card class="mx-auto pa-12 pb-8" elevation="8" max-width="448" rounded="lg">
+                <v-card class="mx-auto pa-16 pb-8" elevation="8" max-width="448" rounded="lg ">
                   <div class="text-subtitle-1 text-medium-emphasis">Account</div>
 
                   <v-text-field
@@ -90,15 +79,6 @@ const visible = ref(false)
                     variant="outlined"
                     @click:append-inner="visible = !visible"
                   ></v-text-field>
-
-                  <v-card class="mb-12" color="surface-variant" variant="tonal">
-                    <v-card-text class="text-medium-emphasis text-caption">
-                      Warning: After 3 consecutive failed login attempts, you account will be
-                      temporarily locked for three hours. If you must login now, you can also click
-                      "Forgot login password?" below to reset the login password.
-                    </v-card-text>
-                  </v-card>
-
                   <v-btn class="mb-8" color="blue" size="large" variant="tonal" block>
                     Log In
                   </v-btn>
@@ -112,6 +92,16 @@ const visible = ref(false)
                     >
                       Sign up now <v-icon icon="mdi-chevron-right"></v-icon>
                     </a>
+
+                    <v-btn
+                      class="mt-5"
+                      size="x-large"
+                      color="blue"
+                      elevation="10"
+                      :to="{ name: 'home' }"
+                    >
+                      Back to Home
+                    </v-btn>
                   </v-card-text>
                 </v-card>
               </div>
@@ -128,7 +118,7 @@ const visible = ref(false)
   position: absolute;
   top: 0px;
   left: 2px;
-  display: fkex;
+  display: flex;
   align-items: center;
   padding: 0.5rem;
   gap: 0.5rem;
