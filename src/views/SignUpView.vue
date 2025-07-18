@@ -45,8 +45,14 @@ const visible = ref(false)
               </div>
 
               <div>
-                <v-card class="mx-auto pa-16 pb-8" elevation="8" max-width="448" rounded="xl">
-                  <div class="text-subtitle-1 text-medium-emphasis">Account</div>
+                <v-card
+                  class="mx-auto pa-16 pb-20"
+                  elevation="8"
+                  max-width="448"
+                  rounded="xl"
+                  width="450"
+                >
+                  <div class="text-subtitle-1 text-medium-emphasis">Email Address</div>
 
                   <v-text-field
                     density="compact"
@@ -59,53 +65,45 @@ const visible = ref(false)
                     class="text-subtitle-1 text-medium-emphasis d-flex align-center justify-space-between"
                   >
                     Password
-
-                    <a
-                      class="text-caption text-decoration-none text-blue"
-                      href="#"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <v-divider class="my-5"></v-divider>
-
-                      <h5>
-                        <RouterLink to="forgotpassword">Forgot login password?</RouterLink>
-                      </h5>
-                    </a>
                   </div>
 
                   <v-text-field
                     :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
                     :type="visible ? 'text' : 'password'"
                     density="compact"
-                    placeholder="Enter your password"
+                    placeholder="Password"
                     prepend-inner-icon="mdi-lock-outline"
                     variant="outlined"
                     @click:append-inner="visible = !visible"
                   ></v-text-field>
-                  <v-btn class="mb-8" color="blue" size="large" variant="tonal" block rounded="xl">
-                    Log In
+
+                  <div
+                    class="text-subtitle-1 text-medium-emphasis d-flex align-center justify-space-between"
+                  >
+                    Confirm Password
+                  </div>
+
+                  <v-text-field
+                    :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+                    :type="visible ? 'text' : 'password'"
+                    density="compact"
+                    placeholder="Password"
+                    prepend-inner-icon="mdi-lock-outline"
+                    variant="outlined"
+                    @click:append-inner="visible = !visible"
+                  ></v-text-field>
+
+                  <v-btn
+                    class="mb-8"
+                    color="blue"
+                    size="large"
+                    variant="tonal"
+                    block
+                    rounded="xl"
+                    :to="{ name: 'login' }"
+                  >
+                    Registre
                   </v-btn>
-
-                  <v-card-text class="text-center">
-                    <v-btn
-                      class="mt-5"
-                      size="x-large"
-                      color="blue"
-                      elevation="10"
-                      :to="{ name: 'home' }"
-                      rounded="xl"
-                    >
-                      Back to Home
-                    </v-btn>
-
-                    <v-divider class="my-5"></v-divider>
-
-                    <h5>
-                      Don't have an account?
-                      <RouterLink to="signup">Click here to Registre</RouterLink>
-                    </h5>
-                  </v-card-text>
                 </v-card>
               </div>
             </v-col>

@@ -48,6 +48,7 @@ function onClick() {
                 color="green"
                 elevation="10"
                 to="login"
+                rounded="xl"
               >
                 Login Here!
               </v-btn>
