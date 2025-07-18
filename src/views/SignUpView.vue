@@ -52,7 +52,7 @@ const visible = ref(false)
                   rounded="xl"
                   width="450"
                 >
-                  <div class="text-subtitle-1 text-medium-emphasis">Email Address</div>
+                  <div class="text-subtitle-1 text-medium-emphasis">email Address</div>
 
                   <v-text-field
                     density="compact"
